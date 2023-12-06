@@ -69,3 +69,10 @@ website = read_html(URL)
 
 needed_txt = website %>% html_nodes("tr") %>% html_text()
 needed_txt
+
+i = 1
+sub_link=paste("https://www.ptt.cc", needed_link[i], sep = "")
+sub_website=read_html(sub_link) 
+
+article_info=sub_website %>% html_nodes(".article-meta-value")
+article_info
